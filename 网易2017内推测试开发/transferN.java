@@ -3,6 +3,13 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Collections;
 import java.util.Scanner;
+/*
+ * 第二题
+ * 执行n次，每次插入B数组一个数，逆序数出结果
+ * 结果用空格分割，最后一个数无空格
+ *case通过50%，说是时间超出限制，或计算太过复杂，内存超出限制
+ *可能用栈实现这道题或是通过找规律，据说用二维矩阵case能通过100%
+ */
 
 public class transferN {
 	public static void main(String[] args) {
