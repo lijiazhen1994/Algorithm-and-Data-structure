@@ -1,4 +1,8 @@
 package test;
+/*
+ *排序砖块有几种只有一种不同颜色的砖块挨着的方式，例如"ABAB",只有"AABB"与"BBAA"满足要求
+ */
+ 
 
 import java.util.HashMap;
 import java.util.Scanner;
