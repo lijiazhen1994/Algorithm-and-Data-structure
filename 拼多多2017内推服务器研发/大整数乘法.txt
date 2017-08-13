@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+char a[1000];
+char b[1000];
+using namespace std;
+
+void bignum(char *num1,char *num2)
+ {
+  int length1=strlen(num1);
+ int length2=strlen(num2);
+int i,l;
+char *res=(char *)malloc(sizeof(char)*(length1+length2));
+  //开辟相应内存
+ memset(res,0,sizeof(char)*(length1+length2));
+ for(i=length1-1;i>=0;i--)
+ for(l=length2-1;l>=0;l--)
+ {
+ res[i+l+1]+=(num1[i]-'0')*(num2[l]-'0');
+  res[i+l]+=res[i+l+1]/10;
+  //马上进行进位
+  res[i+l+1]%=10;
+ }
+  int count=0;
+  while ( res[count]==0 )
+   {
+        count++;
+   }
+  char*ret=(char*)malloc(sizeof(char)*(length1+length2+2));
+  memset(ret,0,sizeof(char)*(length1+length2+2));
+  for(l=0,i=count;i<length1+length2;l++,i++)
+  //非0部分赋给ret
+  {ret[l]=res[i]+'0';}
+  printf(ret);
+  free(res);
+  free(ret);
+   }
+
+
+int main() { scanf("%s%s",a,b); bignum(a,b); return 0;}
