@@ -1,5 +1,5 @@
 package exercise;
-
+/*ç¬¬ä¸€é¢˜*/
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,7 +15,7 @@ public class ImproveGrade {
 		 Scanner in2 = new Scanner(System.in);//r
 		 Scanner avg= new Scanner(System.in);//avg
 				         int n = in.nextInt();
-				         int r = in2.nextInt();//Âú·Ö
+				         int r = in2.nextInt();//æ»¡åˆ†
 				         int average= avg.nextInt();
 				         int numin []=new int [n];
 				         int numout []=new int [n];
@@ -30,10 +30,10 @@ public class ImproveGrade {
 				         
 				         
 				 
-    //¼ÆËãºÍÆ½¾ù·ÖµÄ²îÖµ
+    //è®¡ç®—å’Œå¹³å‡åˆ†çš„å·®å€¼
 		int number=n*average-sum;
 		
-		System.out.println("²îÖµ"+number);
+		System.out.println("å·®å€¼"+number);
 		int tihao=0;
 		HashMap<Integer,Integer> maps = new HashMap<Integer,Integer>();  
 		 for (int k=0;k<n;k++)
@@ -53,9 +53,9 @@ public class ImproveGrade {
 		 while(number>0)
 		 {
 			 int timuhao=maps.get(key[z]);
-			 System.out.println("Ôö¼ÓÌâÄ¿ºÅ"+timuhao);
+			 System.out.println("å¢åŠ é¢˜ç›®å·"+timuhao);
 			 int first=r-numin[timuhao];  
-			 System.out.println("Ôö¼Ó·ÖÖµÎª"+first);
+			 System.out.println("å¢åŠ åˆ†å€¼ä¸º"+first);
 			 if(first>=number)
 			 {
 				 cost=cost+number*numout[timuhao];
